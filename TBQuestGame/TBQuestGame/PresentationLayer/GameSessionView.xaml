@@ -1,0 +1,468 @@
+﻿<Window x:Class="TBQuestGame.PresentationLayer.GameSessionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TBQuestGame.PresentationLayer"
+        mc:Ignorable="d"
+        Background="DarkRed"
+        Width="900"
+        Height="600"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        <LinearGradientBrush 
+            x:Key="GrayBlueGradientBrush" 
+            StartPoint="0,0" 
+            EndPoint="1,0"
+            Opacity="50">
+            <GradientStop Color="MidnightBlue" Offset="0"/>
+            <GradientStop Color="#CCCCFF" Offset="0.25" />
+            <GradientStop Color="#CCCCFF" Offset="0.75" />
+            <GradientStop Color="MidnightBlue" Offset="1" />
+        </LinearGradientBrush>
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="PowderBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+        <Style x:Key="MainPanelLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Lucida Console"/>
+        </Style>
+        <Style x:Key="MainPanelButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="10,0,10,0"/>
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Background" Value="Silver"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid 
+                            Width="{TemplateBinding Width}" 
+                            Height="{TemplateBinding Height}" 
+                            ClipToBounds="True">
+                            <Rectangle 
+                                x:Name="innerRectangle" 
+                                HorizontalAlignment="Stretch" 
+                                VerticalAlignment="Stretch" 
+                                Fill="{TemplateBinding Background}" 
+                                RadiusX="5" 
+                                RadiusY="5" />
+                            <!-- Present Content (text) of the button. -->
+                            <DockPanel Name="myContentPresenterDockPanel">
+                                <ContentPresenter 
+                                    x:Name="myContentPresenter" 
+                                    Margin="2" 
+                                    HorizontalAlignment="Center"
+                                    Content="{TemplateBinding  Content}" 
+                                    TextBlock.Foreground="Black" />
+                            </DockPanel>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush Color="LightSteelBlue" />
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MainPanelTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Padding" Value="3,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border 
+                            Background="{TemplateBinding Background}"   
+                            x:Name="Bd" 
+                            BorderBrush="Black"  
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border
+            Margin="10"
+            Style="{StaticResource BorderStyle}">
+            <Grid
+                Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,0,0,10"
+                    Style="{StaticResource BorderStyle}">
+                    
+                    <StackPanel>
+                    <TabControl 
+                                    x:Name="NPCInfoTabControl"
+                                    Width="175"
+                        Height="180
+                       "
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center">
+                        
+
+                        <TabItem Header="NPCs"
+                                        x:Name="NpcsInfoTabItem">
+                            <DataGrid 
+                                            x:Name="LocationNpcsDataGrid"
+                                            Height="150"
+                                            ItemsSource="{Binding CurrentLocation.Npcs}" 
+                                            SelectedItem="{Binding CurrentNpc}"
+                                            AutoGenerateColumns="False"
+                                            HeadersVisibility="Column">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn 
+                                                    Header="Description" 
+                                                    IsReadOnly="True"                 
+                                                    Binding="{Binding Information, Mode=OneWay}"
+                                                    Width="*">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style>
+                                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+
+                    </TabControl>
+                        <Button 
+                                Content="Look at" 
+                                Style="{StaticResource MainPanelButtonStyle}" 
+                                Click="LookAtButton_Click"
+                            Margin="0,5,0,0"
+                            />
+                        <Button 
+                                Content="Interact" 
+                                Style="{StaticResource MainPanelButtonStyle}" 
+                                Click="InteractButton_Click"
+                            Margin="0,5,0,0"
+                            />
+                        <TextBox
+                                Height="125"
+                                Width="175"
+                                Margin="10"
+                                Background="WhiteSmoke"
+                                BorderThickness="0"
+                                TextWrapping="Wrap"
+                                Text="{Binding CurrentLocationInformation, Mode=OneWay}"
+                                VerticalScrollBarVisibility="Auto"
+                                VerticalContentAlignment="top"
+                                Style="{StaticResource MainPanelTextBoxStyle}" />
+                    </StackPanel>
+                    
+                </Border>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10,0,10,10"
+                    Style="{StaticResource BorderStyle}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel
+                            Grid.Row="0" 
+                            Orientation="Vertical">
+                            <StackPanel
+                                    Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    Margin="0">
+                                <Label 
+                                        Content="{Binding MissionTimeDisplay}" 
+                                        HorizontalAlignment="Center"
+                                        Style="{StaticResource MainPanelLabelStyle}"/>
+                                <Label 
+                                        Content="Current Location" 
+                                        HorizontalAlignment="Center"
+                                        Style="{StaticResource MainPanelLabelStyle}"/>
+                                <TextBox
+                                    Width="250"
+                                    Margin="0,0,0,5"
+                                    Text="{Binding CurrentLocation.GetName, Mode=OneWay}" 
+                                    Style="{StaticResource MainPanelTextBoxStyle}"
+                                    HorizontalContentAlignment="Center"
+                                    Background="WhiteSmoke"/>
+                                <Border
+                                    Grid.Column="1"
+                                    Margin="0"
+                                    Padding="0"
+                                    Background="WhiteSmoke"
+                                    Style="{StaticResource BorderStyle}">
+                                    <TextBox
+                                        Height="150"
+                                        Width="350"
+                                        Margin="10"
+                                        Background="WhiteSmoke"
+                                        BorderThickness="0"
+                                        TextWrapping="Wrap"
+                                        Text="{Binding CurrentLocation.GetDescription, Mode=OneWay}"
+                                        VerticalScrollBarVisibility="Auto"
+                                        VerticalContentAlignment="top"
+                                        Style="{StaticResource MainPanelTextBoxStyle}" />
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Row="1" 
+                            Orientation="Vertical">
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0"/>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0">
+                                <Button 
+                                    x:Name="BetaButton"
+                                    Content="Forward" 
+                                    Style="{StaticResource MainPanelButtonStyle}" 
+                                    Click="BetaTravelButton_Click"/>
+                                <TextBox
+                                    Width="250"
+                                    Text="{Binding BetaLocation.GetName, Mode=OneWay}" 
+                                     Visibility="{Binding HasBetaLocation}"                                  
+                                    Style="{StaticResource MainPanelTextBoxStyle}"/>
+                            </StackPanel>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0"/>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0">
+                                <Button 
+                                    x:Name="DeltaButton"
+                                    Content="Backward" 
+                                    Style="{StaticResource MainPanelButtonStyle}" 
+                                    Click="DeltaTravelButton_Click"/>
+                                <TextBox
+                                    Width="250"
+                                    Text="{Binding DeltaLocation.GetName, Mode=OneWay}" 
+                                    Visibility="{Binding HasDeltaLocation}"
+                                    Style="{StaticResource MainPanelTextBoxStyle}"/>
+                            </StackPanel>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0">
+                                <Button 
+                                    x:Name="PickUpButton"
+                                    Content="Pick Up Item" 
+                                    Style="{StaticResource MainPanelButtonStyle}" 
+                                    Click="PickUpButton_Click"/>
+                                
+                            </StackPanel>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0"/>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                Margin="0,5,10,0">
+                                <Button 
+                                    x:Name="UseButton"
+                                    Content="Use Item" 
+                                    Style="{StaticResource MainPanelButtonStyle}" 
+                                    Click="UseButton_Click"/>
+                                
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="0,0,0,10"
+                    Style="{StaticResource BorderStyle}">
+                    <Grid>
+                        <StackPanel
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
+
+                            <TabControl 
+                                    x:Name="PlayerDataTabControl"
+                                    Width="175"
+                            Height="200"
+                            VerticalAlignment="Top"
+                            
+                            >
+                                <TabItem Header="Player Items"
+                                        x:Name="PlayerItemsInfoTabItem">
+                                    <DataGrid 
+                                            x:Name="PlayerItemsDataGrid"
+                                            ItemsSource="{Binding Player.Items}"
+                                    SelectedItem="{Binding CurrentGameItem}"
+                                    AutoGenerateColumns="False"
+                                    HeadersVisibility="Column">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Name"
+                                                Binding="{Binding GameItem.Name, Mode=OneWay}"
+                                                Width="*"/>
+                                            <DataGridTextColumn Header="Qty"
+                                                IsReadOnly="True"
+                                                Width="Auto"
+                                                Binding="{Binding Quantity, Mode=OneWay}"/>
+                                            
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </TabItem>
+                            </TabControl>
+                        </StackPanel>
+                        <StackPanel
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom">
+                            
+                        <TabControl 
+                                    x:Name="LocationInfoTabControl"
+                                    Width="175"
+                            Height="180"
+                            VerticalAlignment="Bottom"
+                            
+                            >
+                            <TabItem Header="Location Items"
+                                        x:Name="ItemsInfoTabItem">
+                                <DataGrid 
+                                            x:Name="LocationItemsDataGrid"
+                                            Height="150"
+                                            ItemsSource="{Binding CurrentLocation.GameItems}" 
+                                            SelectedItem="{Binding CurrentGameItem}"
+                                            AutoGenerateColumns="False"
+                                            HeadersVisibility="Column"
+                                    VerticalAlignment="Bottom"
+                                    >
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn 
+                                                    Header="Description" 
+                                                    IsReadOnly="True"                 
+                                                    Binding="{Binding GameItem.Information, Mode=OneWay}"
+                                                    Width="*">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style>
+                                                    <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn 
+                                                    Header="Qty"
+                                                    IsReadOnly="True"
+                                                    Width="Auto"
+                                                    Binding="{Binding Quantity, Mode=OneWay}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </TabItem>
+                        </TabControl>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Style="{StaticResource BorderStyle}">
+                    <Grid
+                        Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel
+                            Grid.Column="0"
+                            Orientation="Vertical">
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+                                <TextBox Text="{Binding Player.GetName}" Style="{StaticResource MainPanelTextBoxStyle}"/>
+                                <Label Content="Name" Style="{StaticResource MainPanelLabelStyle}"/>
+                            </StackPanel>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+                                <TextBox Text="{Binding Player.Sex}" Style="{StaticResource MainPanelTextBoxStyle}"/>
+                                <Label Content="Gender" Style="{StaticResource MainPanelLabelStyle}"/>
+                            </StackPanel>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+                                <TextBox Text="{Binding Player.GetFear}" Style="{StaticResource MainPanelTextBoxStyle}"/>
+                                <Label Content="Fear" Style="{StaticResource MainPanelLabelStyle}"/>
+                            </StackPanel>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"/>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"/>
+                            <Button Content="Quit" HorizontalContentAlignment="left" Height="42"  Click="Button_Click" Margin="0,0,174,0"/>
+                        </StackPanel>
+                        <Border
+                            Grid.Column="1"
+                            Margin="0"
+                            Padding="0"
+                            Background="WhiteSmoke"
+                            Style="{StaticResource BorderStyle}">
+                            <TextBox
+                                Height="auto"
+                                Width="auto"
+                                Margin="10"
+                                Background="WhiteSmoke"
+                                BorderThickness="0"
+                                TextWrapping="Wrap"
+                                Text="{Binding MessageDisplay, Mode=OneWay}"
+                                VerticalScrollBarVisibility="Auto"
+                                VerticalContentAlignment="top"
+                                Style="{StaticResource MainPanelTextBoxStyle}" />
+                        </Border>
+                        <StackPanel
+                            Grid.Column="2"
+                            Orientation="Vertical">
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right"/>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right"/>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

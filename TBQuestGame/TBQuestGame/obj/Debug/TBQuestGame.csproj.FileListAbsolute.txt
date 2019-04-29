@@ -1,0 +1,68 @@
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csprojAssemblyReference.cache
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.g.cs
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.g.cs
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\App.g.cs
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.cache
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.lref
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe.config
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.pdb
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.baml
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.baml
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.g.resources
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.Properties.Resources.resources
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.GenerateResource.cache
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.CoreCompileInputs.cache
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.exe
+C:\Users\Production\Desktop\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.pdb
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csprojAssemblyReference.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\App.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.lref
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.exe
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.pdb
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe.config
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.pdb
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.baml
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.baml
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.g.resources
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.Properties.Resources.resources
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.GenerateResource.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.CoreCompileInputs.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csprojAssemblyReference.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\App.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.lref
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.exe
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.pdb
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe.config
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.pdb
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.baml
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.baml
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.g.resources
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.Properties.Resources.resources
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.GenerateResource.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S2\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.CoreCompileInputs.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe.config
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.exe
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\bin\Debug\TBQuestGame.pdb
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csprojAssemblyReference.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\App.g.cs
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame_MarkupCompile.lref
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\GameSessionView.baml
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\PresentationLayer\PlayerSetupView.baml
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.g.resources
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.Properties.Resources.resources
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.GenerateResource.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.csproj.CoreCompileInputs.cache
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.exe
+C:\Users\Production\Documents\CIT 195\TBQG\S3\S2\S3\TBQuestGame\TBQuestGame\obj\Debug\TBQuestGame.pdb
